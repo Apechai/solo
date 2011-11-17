@@ -12,18 +12,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= params[:controller] %>">
-    <div id="container" class="container">
+    <div id="container">
       <header>
         <nav>
-          <ul class="hmenu">
+		<div class="topbar">
+		<div class="fill">
+		<div class="container">
+		<h3><a href="#">Learning Quotient</a></h3>
+		<ul>
             <%= render 'shared/navigation' %>
-          </ul>
+		</ul>
+		</div>
+		</div>
+		</div>
         </nav>
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String) %>
         <%- end -%>
       </header>
-      <div id="main" role="main">
+      <div id="main" role="main" class="container">
         <%= yield %>
       </div>
       <footer>

@@ -1,10 +1,16 @@
 Solo::Application.routes.draw do
   #get \"users\/show\"
 
-  root :to => "home#index"
 
   devise_for :users
-  resources :users, :only => :show
+  
+  resources :users
+  resources :posts
+  
+  match 'posts/:status' => 'posts#index'
+ 
+  
+  root :to => "posts#index"
 
 
   # The priority is based upon order of creation:

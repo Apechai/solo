@@ -1,0 +1,7 @@
+<%= link_to "Recent", :controller => "posts", :status => "recent" %>
+<%= link_to "Alphabetical", :controller => "posts", :status => "alphabetical" %>
+<%= link_to "New", :controller => "posts", :action => "new" %>
+
+<table class="posts" summary="User posts">
+	<%= render @posts %>
+</table>

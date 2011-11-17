@@ -1,4 +1,10 @@
 <h3>Home</h3>
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
+
+<%= link_to "Recent", recent_path %>
+<%= link_to "Popular", popular_path %>
+
+<%= render :partial => 'shared/post', :collection => @posts %>
+
 <% end %>

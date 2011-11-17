@@ -39,3 +39,4 @@ gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "devise", ">= 1.4.9"
 gem "twitter-bootstrap-rails"
 gem "rails-footnotes", ">= 3.7", :group => :development
+gem 'will_paginate'

@@ -1,4 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<h1><%= @user.name %>'s Posts</h1>
+<% unless @user.posts.empty? %>
+	<table class="posts" summary="User posts">
+		<%= render @posts %>
+	</table>
+	<%= will_paginate @posts %>
+<% end %>
+	Write a new post:
+	<%= render 'shared/post_form' %>
+	
