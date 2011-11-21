@@ -1,7 +1,9 @@
 <tr>
-<td class="post">
+<div class="post">
+	<blockquote>
 	<h3><%= post.title %></h3>
-	<%= post.content %>
-	<p>by <%= post.user.name %>
-</td>
+	<p><%= post.content %></p>
+	<small><%= post.user.name %></small>
+	</blockquote>
+</div>
 </tr>

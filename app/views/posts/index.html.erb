@@ -1,6 +1,18 @@
-<%= link_to "Recent", :controller => "posts", :status => "recent" %>
-<%= link_to "Alphabetical", :controller => "posts", :status => "alphabetical" %>
-<%= link_to "New", :controller => "posts", :action => "new" %>
+<ul class="pills">
+<% if params[:status] == "recent" %>
+	<li class="active">
+<% else %>
+	<li>
+<% end %>
+	<%= link_to "Recent", :controller => "posts", :status => "recent" %></li>
+<% if params[:status] == "alphabetical" %>
+	<li class="active">
+<% else %>
+	<li>
+	<% end %>
+<%= link_to "Alphabetical", :controller => "posts", :status => "alphabetical" %></l1>
+<li><%= link_to "New", :controller => "posts", :action => "new" %></li>
+</ul>
 
 <table class="posts" summary="User posts">
 	<%= render @posts %>

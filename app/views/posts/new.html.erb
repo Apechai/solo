@@ -1,2 +1,8 @@
+<ul class="pills">
+<li><%= link_to "Recent", :controller => "posts", :status => "recent" %></li>
+<li><%= link_to "Alphabetical", :controller => "posts", :status => "alphabetical" %></l1>
+<li class="active"><%= link_to "New", :controller => "posts", :action => "new" %></li>
+</ul>
+
 Write a new post:
 <%= render 'shared/post_form' %>

@@ -2,10 +2,10 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!
 	
   def index
-      if params[:status] == "recent"
-        @posts = Post.recent
-      else
+      if params[:status] == "alphabetical"
         @posts = Post.alphabetical
+      else
+        @posts = Post.recent
       end
   end
 
