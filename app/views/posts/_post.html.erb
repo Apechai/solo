@@ -4,6 +4,12 @@
 	<h3><%= post.title %></h3>
 	<p><%= post.content %></p>
 	<small><%= post.user.name %></small>
+	<p>Votes: <%= post.votes_count %></p>
 	</blockquote>
+	<%= form_for @vote do |f| %>
+	<%= f.hidden_field "post_id", :value => post.id %>
+	<%= f.hidden_field "user_id", :value => post.user.id %>
+	<%= f.submit "Vote Up", :class => "btn" %>
+	<% end %>
 </div>
 </tr>

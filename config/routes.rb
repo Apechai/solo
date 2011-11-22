@@ -1,4 +1,12 @@
 Solo::Application.routes.draw do
+  get "votes/index"
+
+  get "votes/new"
+
+  get "votes/create"
+
+  get "votes/destroy"
+
   #get \"users\/show\"
 
 
@@ -6,6 +14,7 @@ Solo::Application.routes.draw do
   
   resources :users
   resources :posts
+  resources :votes, :only => [:create, :destroy]
   
   match 'posts/:status' => 'posts#index'
  
