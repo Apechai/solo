@@ -2,6 +2,7 @@
 	height: 16px;
 	width: 16px;
 	margin: 4px;
+	vertical-align: middle;
 }
 
 .post {
@@ -16,3 +17,4 @@
 #postbody{
 	max-width: 300px;
 }
+
