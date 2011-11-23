@@ -2,9 +2,13 @@
 <div class="post">
 	<blockquote>
 	<%= form_for @vote do |f| %>
-	<div class="right">	<%= image_submit_tag "plus32.png", :size => "16x16", :class => "squareicon" %><%= post.votes_count %></div>
+	<div class="right">	<%= image_submit_tag "plus32.png", :size => "16x16", :class => "squareicon" %>
+	<span class="label success"><%= post.votes_count %></span>
+	</div>
 	<div id="postbody">
-	<h3><%= post.title %></h3>
+	<% if post.title %>
+	<h3><%= link_to post.title, post.link %></h3>
+	<% end %>
 	<p><%= post.content %></p>
 	<small><%= post.user.name %></small>
 	</div>

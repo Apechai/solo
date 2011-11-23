@@ -18,3 +18,12 @@
 	max-width: 300px;
 }
 
+h3 a{
+	color: #2E2633;
+}
+
+h3 a:hover{
+	color: #99173C;
+	background-color: white;
+}
+

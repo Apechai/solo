@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :content, :votes_count
+  attr_accessible :title, :content, :link, :votes_count
   
   belongs_to :user
   has_many :votes, :dependent => :destroy
