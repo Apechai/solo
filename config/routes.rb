@@ -16,7 +16,7 @@ Solo::Application.routes.draw do
   resources :posts
   resources :votes, :only => [:create, :destroy]
   
-  match 'posts/:status' => 'posts#index'
+  match 'posts/:status' => 'posts#index', :defaults => {:status => "popular"}
  
   
   root :to => "posts#index"

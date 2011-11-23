@@ -1,4 +1,10 @@
 <ul class="pills">
+<% if params[:status] == "popular"%>
+	<li class="active">
+<% else %>
+	<li>
+<% end %>
+	<%= link_to "Popular", :controller => "posts", :status => "popular" %></li>
 <% if params[:status] == "recent" %>
 	<li class="active">
 <% else %>

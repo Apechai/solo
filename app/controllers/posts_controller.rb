@@ -5,8 +5,10 @@ class PostsController < ApplicationController
     @vote = Vote.new(params[:vote])
       if params[:status] == "alphabetical"
         @posts = Post.alphabetical
-      else
+      elsif params[:status] == "recent"
         @posts = Post.recent
+      else
+        @posts = Post.popular
       end
   end
 
