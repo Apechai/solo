@@ -3,6 +3,7 @@ HOST_OS = RbConfig::CONFIG['host_os']
 source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 
+gem 'pg', :group => :production
 gem 'sqlite3', '1.3.4', :group => :development
 
 group :assets do
