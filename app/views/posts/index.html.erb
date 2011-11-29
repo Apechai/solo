@@ -20,6 +20,10 @@
 <li><%= link_to "New", :controller => "posts", :action => "new" %></li>
 </ul>
 
+<% flash.each do |key, value| %>
+	<div class="flash <%= key %>"><%= value %></div>
+<% end %>
+
 <table class="posts" summary="User posts">
 	<%= render @posts %>
 </table>

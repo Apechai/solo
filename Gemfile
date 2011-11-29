@@ -5,10 +5,6 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3', '1.3.4', :group => :development
 
-group :production do
-	gem "pg"
-end
-
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'

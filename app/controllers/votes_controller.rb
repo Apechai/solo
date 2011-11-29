@@ -20,6 +20,7 @@ class VotesController < ApplicationController
       redirect_to root_path
     else
       flash[:failure] = "You did not vote"
+      @posts = Post.popular
       render 'posts/index'
     end
       
