@@ -1,6 +1,5 @@
 class Post < ActiveRecord::Base
   attr_accessible :title, :content, :link, :votes_count
-  before_save :default_votes
   
   belongs_to :user
   has_many :votes, :dependent => :destroy
@@ -18,11 +17,11 @@ class Post < ActiveRecord::Base
    # read_attribute(:votes_count).presence || 0
 #  end
   
-  def before_votes
-    if self.votes.count.nil?
-      self.votes.count == 0
-    end
-  end
+#  def before_votes
+#    if self.votes.count.nil?
+#      self.votes.count == 0
+#    end
+#  end
     
     
 end
