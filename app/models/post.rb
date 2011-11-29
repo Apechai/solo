@@ -9,7 +9,11 @@ class Post < ActiveRecord::Base
   scope :popular, order('votes_count DESC')
   
   def votes_count
-    self.votes.count
+    if self.votes.count > 0
+      self.votes.count
+    else
+      0
+    end
    # read_attribute(:votes_count).presence || 0
   end
   
