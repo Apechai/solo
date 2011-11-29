@@ -7,9 +7,5 @@ class Post < ActiveRecord::Base
   scope :recent, order('created_at DESC')
   scope :alphabetical, order('title ASC')
   scope :popular, order('votes_count DESC')
-  
-  def votes_count
-    read_attribute(:votes_count).presence || 0
-  end
-  
+    
 end
