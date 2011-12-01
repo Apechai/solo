@@ -14,7 +14,7 @@ class VotesController < ApplicationController
   def create
     @vote = Vote.new(params[:vote])
     post = params[:vote][:post_id]
-    uid = params[:vote][:user_id] 
+    @vote.user = current_user
     if @vote.save
       flash[:success] = "You voted for the article"
       redirect_to root_path
