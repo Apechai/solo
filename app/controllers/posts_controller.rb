@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_filter :authenticate_user!
+before_filter :authenticate_user!, :only => [:new, :create]
 	
   def index
     @vote = Vote.new(params[:vote])
